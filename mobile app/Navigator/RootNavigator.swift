@@ -7,7 +7,7 @@ extension Root {
             case details
         }
         
-        var base: UIViewController? = nil
+        weak var base: UIViewController? = nil
         
         func navigate(to destination: Destination) {
             
@@ -18,9 +18,9 @@ extension Root {
             switch destination {
             case .details:
                 base?.present(
-                    Details.Presenter {
+                    Details.Presenter(
                         Details.ViewController()
-                    },
+                    ),
                     animated: true,
                     completion: nil
                 )

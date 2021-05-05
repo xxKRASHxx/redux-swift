@@ -1,9 +1,12 @@
 import UIKit
 import UIKitPresenter
 import Redux
+import Presenter
 
 extension Root {
-    final class Presenter: AppPresenter<ViewController> {
+    
+    final class Presenter<ViewController: UIViewController & Renderer>:
+        AppPresenter<ViewController> where ViewController.Props == Root.Props {
         
         private let navigator: Navigator
         
@@ -21,22 +24,12 @@ extension Root {
             fatalError("init(coder:) has not been implemented")
         }
         
-        override func present(_ renderer: ViewController) {
-            super.present(renderer)
-            
-            weak var wRenderer = renderer
-            weak var wStore = store
-            weak var wNavigator = navigator
-            
-            _ = store.addObserver { state in
-                DispatchQueue.main.async {
-                    wRenderer?.render(props: .init(
-                        counter: state.counter,
-                        increment: { wStore?.dispatch(action: .increment) },
-                        details: { wNavigator?.navigate(to: .details) }
-                    ))
-                }
-            }
+        override func map(state: AppState) -> Props? {
+            .init(
+                counter: state.counter,
+                increment: { [weak store] in store?.dispatch(action: .increment) },
+                details: { [weak navigator] in navigator?.navigate(to: .details) }
+            )
         }
     }
 }

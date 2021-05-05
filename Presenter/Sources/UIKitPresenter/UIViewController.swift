@@ -12,9 +12,9 @@ open class ViewControllerPresenter<ViewController: UIViewController & Renderer>:
         super.init(nibName: nil, bundle: nil)
     }
     
-    public convenience init(_ builder: () -> ViewController) {
+    public convenience init(_ renderer: ViewController) {
         self.init()
-        present(builder())
+        present(renderer)
     }
     
     required public init?(coder: NSCoder) {
