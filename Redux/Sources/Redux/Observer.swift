@@ -1,14 +1,14 @@
 import Foundation
 
-extension Store.Observer {
-    public enum Mode {
+public extension Store.Observer {
+    enum Mode {
         case every
         case throttle
     }
 }
 
 extension Store {
-    class Observer {
+    public class Observer {
         
         let handleState: (State?) -> ()
         
@@ -78,11 +78,11 @@ extension Store.Observer {
 
 extension Store.Observer: Hashable {
     
-    func hash(into hasher: inout Hasher) {
+    public func hash(into hasher: inout Hasher) {
         hasher.combine(ObjectIdentifier(self).hashValue)
     }
     
-    static func == (left: Store.Observer, right: Store.Observer) -> Bool {
+    public static func == (left: Store.Observer, right: Store.Observer) -> Bool {
         return left === right
     }
 }

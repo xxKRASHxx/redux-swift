@@ -13,7 +13,32 @@
 		D236CD64263C36D900E88DFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D236CD63263C36D900E88DFF /* Preview Assets.xcassets */; };
 		D236CD70263C36D900E88DFF /* ReduxDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D236CD6F263C36D900E88DFF /* ReduxDemoTests.swift */; };
 		D236CD7B263C36D900E88DFF /* ReduxDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D236CD7A263C36D900E88DFF /* ReduxDemoUITests.swift */; };
+		D23C11422642D8E7003F8D30 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C11412642D8E7003F8D30 /* Logger.swift */; };
+		D23C11602642DBC8003F8D30 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C115F2642DBC8003F8D30 /* DetailsPresenter.swift */; };
+		D23C11672642DC9D003F8D30 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C11662642DC9D003F8D30 /* Navigator.swift */; };
+		D23C11712642DCCD003F8D30 /* RootNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C11702642DCCD003F8D30 /* RootNavigator.swift */; };
+		D243F6232642B973006384B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D243F6222642B973006384B2 /* AppDelegate.swift */; };
+		D243F6252642B973006384B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D243F6242642B973006384B2 /* SceneDelegate.swift */; };
+		D243F6272642B973006384B2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D243F6262642B973006384B2 /* RootViewController.swift */; };
+		D243F62C2642B975006384B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D243F62B2642B975006384B2 /* Assets.xcassets */; };
+		D243F62F2642B975006384B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D243F62D2642B975006384B2 /* LaunchScreen.storyboard */; };
 		D28FA1BA263C391E003B1A4A /* Redux in Frameworks */ = {isa = PBXBuildFile; productRef = D28FA1B9263C391E003B1A4A /* Redux */; };
+		D2B36B122642BCE8003F1EC9 /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B36B112642BCE8003F1EC9 /* Inject.swift */; };
+		D2B36B1D2642BE05003F1EC9 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D2B36B1C2642BE05003F1EC9 /* Swinject */; };
+		D2B36B232642BEC2003F1EC9 /* Presenter in Frameworks */ = {isa = PBXBuildFile; productRef = D2B36B222642BEC2003F1EC9 /* Presenter */; };
+		D2B36B252642BEC2003F1EC9 /* UIKitPresenter in Frameworks */ = {isa = PBXBuildFile; productRef = D2B36B242642BEC2003F1EC9 /* UIKitPresenter */; };
+		D2B36B272642BEC2003F1EC9 /* Redux in Frameworks */ = {isa = PBXBuildFile; productRef = D2B36B262642BEC2003F1EC9 /* Redux */; };
+		D2B36B2F2642BFE0003F1EC9 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B36B2E2642BFE0003F1EC9 /* DetailsViewController.swift */; };
+		D2B36B362642C44F003F1EC9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D2B36B352642C44F003F1EC9 /* SnapKit */; };
+		D2B36B3C2642C4E6003F1EC9 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B36B3B2642C4E6003F1EC9 /* RootPresenter.swift */; };
+		D2B36B422642CAB6003F1EC9 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B36B412642CAB6003F1EC9 /* AppState.swift */; };
+		D2B36B492642CAF4003F1EC9 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B36B482642CAF4003F1EC9 /* Actions.swift */; };
+		D2B36B532642CB9B003F1EC9 /* StoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B36B522642CB9B003F1EC9 /* StoreAssembly.swift */; };
+		D2B36B5A2642CC11003F1EC9 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = D2B36B592642CC11003F1EC9 /* SwinjectAutoregistration */; };
+		D2B36B602642CC50003F1EC9 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B36B5F2642CC50003F1EC9 /* AppStore.swift */; };
+		D2B36B662642CF3C003F1EC9 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B36B652642CF3C003F1EC9 /* AppReducer.swift */; };
+		D2B36B6C2642D2C8003F1EC9 /* ViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B36B6B2642D2C8003F1EC9 /* ViewControllerPresenter.swift */; };
+		D2B36B732642D4C5003F1EC9 /* Modules.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B36B722642D4C5003F1EC9 /* Modules.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +72,29 @@
 		D236CD76263C36D900E88DFF /* ReduxDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReduxDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D236CD7A263C36D900E88DFF /* ReduxDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxDemoUITests.swift; sourceTree = "<group>"; };
 		D236CD7C263C36D900E88DFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D23C11412642D8E7003F8D30 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		D23C115F2642DBC8003F8D30 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		D23C11662642DC9D003F8D30 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		D23C11702642DCCD003F8D30 /* RootNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigator.swift; sourceTree = "<group>"; };
+		D243F6152642B445006384B2 /* Presenter */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Presenter; sourceTree = "<group>"; };
+		D243F6202642B973006384B2 /* mobile app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mobile app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D243F6222642B973006384B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D243F6242642B973006384B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D243F6262642B973006384B2 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		D243F62B2642B975006384B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D243F62E2642B975006384B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D243F6302642B975006384B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D28FA1B4263C390A003B1A4A /* Redux */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Redux; sourceTree = "<group>"; };
+		D2B36B112642BCE8003F1EC9 /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
+		D2B36B2E2642BFE0003F1EC9 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		D2B36B3B2642C4E6003F1EC9 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
+		D2B36B412642CAB6003F1EC9 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		D2B36B482642CAF4003F1EC9 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		D2B36B522642CB9B003F1EC9 /* StoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreAssembly.swift; sourceTree = "<group>"; };
+		D2B36B5F2642CC50003F1EC9 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		D2B36B652642CF3C003F1EC9 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		D2B36B6B2642D2C8003F1EC9 /* ViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenter.swift; sourceTree = "<group>"; };
+		D2B36B722642D4C5003F1EC9 /* Modules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modules.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,16 +120,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D243F61D2642B973006384B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2B36B1D2642BE05003F1EC9 /* Swinject in Frameworks */,
+				D2B36B272642BEC2003F1EC9 /* Redux in Frameworks */,
+				D2B36B232642BEC2003F1EC9 /* Presenter in Frameworks */,
+				D2B36B252642BEC2003F1EC9 /* UIKitPresenter in Frameworks */,
+				D2B36B362642C44F003F1EC9 /* SnapKit in Frameworks */,
+				D2B36B5A2642CC11003F1EC9 /* SwinjectAutoregistration in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		D236CD50263C36D300E88DFF = {
 			isa = PBXGroup;
 			children = (
+				D243F6152642B445006384B2 /* Presenter */,
 				D28FA1B4263C390A003B1A4A /* Redux */,
 				D236CD5B263C36D400E88DFF /* ReduxDemo */,
 				D236CD6E263C36D900E88DFF /* ReduxDemoTests */,
 				D236CD79263C36D900E88DFF /* ReduxDemoUITests */,
+				D243F6212642B973006384B2 /* mobile app */,
 				D236CD5A263C36D400E88DFF /* Products */,
 				D28FA1B8263C391E003B1A4A /* Frameworks */,
 			);
@@ -94,6 +156,7 @@
 				D236CD59263C36D400E88DFF /* ReduxDemo.app */,
 				D236CD6B263C36D900E88DFF /* ReduxDemoTests.xctest */,
 				D236CD76263C36D900E88DFF /* ReduxDemoUITests.xctest */,
+				D243F6202642B973006384B2 /* mobile app.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,11 +216,158 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D23C114F2642D995003F8D30 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D243F6302642B975006384B2 /* Info.plist */,
+				D243F62D2642B975006384B2 /* LaunchScreen.storyboard */,
+				D243F62B2642B975006384B2 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D23C11582642DB1D003F8D30 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				D23C115F2642DBC8003F8D30 /* DetailsPresenter.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		D23C115A2642DB5D003F8D30 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				D2B36B522642CB9B003F1EC9 /* StoreAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		D23C11652642DC92003F8D30 /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				D23C11662642DC9D003F8D30 /* Navigator.swift */,
+				D23C11702642DCCD003F8D30 /* RootNavigator.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
+		D243F6212642B973006384B2 /* mobile app */ = {
+			isa = PBXGroup;
+			children = (
+				D23C11652642DC92003F8D30 /* Navigator */,
+				D243F6462642BC1D006384B2 /* Redux */,
+				D243F6452642BBF7006384B2 /* Presenter */,
+				D243F6442642BBE4006384B2 /* View */,
+				D2B36B102642BCD9003F1EC9 /* Misc */,
+				D23C114F2642D995003F8D30 /* Resources */,
+			);
+			path = "mobile app";
+			sourceTree = "<group>";
+		};
+		D243F6442642BBE4006384B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D2B36B2C2642BFCA003F1EC9 /* Root */,
+				D2B36B2D2642BFD1003F1EC9 /* Details */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D243F6452642BBF7006384B2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D2B36B6B2642D2C8003F1EC9 /* ViewControllerPresenter.swift */,
+				D2B36B7C2642D527003F1EC9 /* Root */,
+				D23C11582642DB1D003F8D30 /* Details */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D243F6462642BC1D006384B2 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				D2B36B5F2642CC50003F1EC9 /* AppStore.swift */,
+				D2B36B472642CAEA003F1EC9 /* Actions */,
+				D243F6492642BC3C006384B2 /* Middleware */,
+				D243F6482642BC32006384B2 /* Reducer */,
+				D243F6472642BC2B006384B2 /* State */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		D243F6472642BC2B006384B2 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				D2B36B412642CAB6003F1EC9 /* AppState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		D243F6482642BC32006384B2 /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+				D2B36B652642CF3C003F1EC9 /* AppReducer.swift */,
+			);
+			path = Reducer;
+			sourceTree = "<group>";
+		};
+		D243F6492642BC3C006384B2 /* Middleware */ = {
+			isa = PBXGroup;
+			children = (
+				D23C11412642D8E7003F8D30 /* Logger.swift */,
+			);
+			path = Middleware;
+			sourceTree = "<group>";
+		};
 		D28FA1B8263C391E003B1A4A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2B36B102642BCD9003F1EC9 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				D23C115A2642DB5D003F8D30 /* Assembly */,
+				D2B36B722642D4C5003F1EC9 /* Modules.swift */,
+				D243F6242642B973006384B2 /* SceneDelegate.swift */,
+				D243F6222642B973006384B2 /* AppDelegate.swift */,
+				D2B36B112642BCE8003F1EC9 /* Inject.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		D2B36B2C2642BFCA003F1EC9 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				D243F6262642B973006384B2 /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		D2B36B2D2642BFD1003F1EC9 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				D2B36B2E2642BFE0003F1EC9 /* DetailsViewController.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		D2B36B472642CAEA003F1EC9 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				D2B36B482642CAF4003F1EC9 /* Actions.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		D2B36B7C2642D527003F1EC9 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				D2B36B3B2642C4E6003F1EC9 /* RootPresenter.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +429,31 @@
 			productReference = D236CD76263C36D900E88DFF /* ReduxDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D243F61F2642B973006384B2 /* mobile app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D243F6332642B975006384B2 /* Build configuration list for PBXNativeTarget "mobile app" */;
+			buildPhases = (
+				D243F61C2642B973006384B2 /* Sources */,
+				D243F61D2642B973006384B2 /* Frameworks */,
+				D243F61E2642B973006384B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mobile app";
+			packageProductDependencies = (
+				D2B36B1C2642BE05003F1EC9 /* Swinject */,
+				D2B36B222642BEC2003F1EC9 /* Presenter */,
+				D2B36B242642BEC2003F1EC9 /* UIKitPresenter */,
+				D2B36B262642BEC2003F1EC9 /* Redux */,
+				D2B36B352642C44F003F1EC9 /* SnapKit */,
+				D2B36B592642CC11003F1EC9 /* SwinjectAutoregistration */,
+			);
+			productName = "mobile app";
+			productReference = D243F6202642B973006384B2 /* mobile app.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -239,6 +474,9 @@
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = D236CD58263C36D400E88DFF;
 					};
+					D243F61F2642B973006384B2 = {
+						CreatedOnToolsVersion = 12.4;
+					};
 				};
 			};
 			buildConfigurationList = D236CD54263C36D400E88DFF /* Build configuration list for PBXProject "ReduxDemo" */;
@@ -250,11 +488,17 @@
 				Base,
 			);
 			mainGroup = D236CD50263C36D300E88DFF;
+			packageReferences = (
+				D2B36B1B2642BE05003F1EC9 /* XCRemoteSwiftPackageReference "Swinject" */,
+				D2B36B342642C44F003F1EC9 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D2B36B582642CC11003F1EC9 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+			);
 			productRefGroup = D236CD5A263C36D400E88DFF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				D236CD58263C36D400E88DFF /* ReduxDemo */,
+				D243F61F2642B973006384B2 /* mobile app */,
 				D236CD6A263C36D900E88DFF /* ReduxDemoTests */,
 				D236CD75263C36D900E88DFF /* ReduxDemoUITests */,
 			);
@@ -282,6 +526,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D243F61E2642B973006384B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D243F62F2642B975006384B2 /* LaunchScreen.storyboard in Resources */,
+				D243F62C2642B975006384B2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +566,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D243F61C2642B973006384B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2B36B3C2642C4E6003F1EC9 /* RootPresenter.swift in Sources */,
+				D2B36B662642CF3C003F1EC9 /* AppReducer.swift in Sources */,
+				D23C11602642DBC8003F8D30 /* DetailsPresenter.swift in Sources */,
+				D23C11712642DCCD003F8D30 /* RootNavigator.swift in Sources */,
+				D2B36B602642CC50003F1EC9 /* AppStore.swift in Sources */,
+				D2B36B6C2642D2C8003F1EC9 /* ViewControllerPresenter.swift in Sources */,
+				D23C11672642DC9D003F8D30 /* Navigator.swift in Sources */,
+				D2B36B492642CAF4003F1EC9 /* Actions.swift in Sources */,
+				D2B36B122642BCE8003F1EC9 /* Inject.swift in Sources */,
+				D2B36B532642CB9B003F1EC9 /* StoreAssembly.swift in Sources */,
+				D2B36B422642CAB6003F1EC9 /* AppState.swift in Sources */,
+				D2B36B732642D4C5003F1EC9 /* Modules.swift in Sources */,
+				D243F6272642B973006384B2 /* RootViewController.swift in Sources */,
+				D243F6232642B973006384B2 /* AppDelegate.swift in Sources */,
+				D23C11422642D8E7003F8D30 /* Logger.swift in Sources */,
+				D243F6252642B973006384B2 /* SceneDelegate.swift in Sources */,
+				D2B36B2F2642BFE0003F1EC9 /* DetailsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -327,6 +604,17 @@
 			targetProxy = D236CD77263C36D900E88DFF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D243F62D2642B975006384B2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D243F62E2642B975006384B2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D236CD7D263C36D900E88DFF /* Debug */ = {
@@ -578,6 +866,49 @@
 			};
 			name = Release;
 		};
+		D243F6312642B975006384B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 662KN2BST6;
+				INFOPLIST_FILE = "mobile app/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.krash.mobile-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D243F6322642B975006384B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 662KN2BST6;
+				INFOPLIST_FILE = "mobile app/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.krash.mobile-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -617,12 +948,75 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		D243F6332642B975006384B2 /* Build configuration list for PBXNativeTarget "mobile app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D243F6312642B975006384B2 /* Debug */,
+				D243F6322642B975006384B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D2B36B1B2642BE05003F1EC9 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
+			};
+		};
+		D2B36B342642C44F003F1EC9 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		D2B36B582642CC11003F1EC9 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Swinject/SwinjectAutoregistration.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		D28FA1B9263C391E003B1A4A /* Redux */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Redux;
+		};
+		D2B36B1C2642BE05003F1EC9 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2B36B1B2642BE05003F1EC9 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		D2B36B222642BEC2003F1EC9 /* Presenter */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Presenter;
+		};
+		D2B36B242642BEC2003F1EC9 /* UIKitPresenter */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIKitPresenter;
+		};
+		D2B36B262642BEC2003F1EC9 /* Redux */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Redux;
+		};
+		D2B36B352642C44F003F1EC9 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2B36B342642C44F003F1EC9 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		D2B36B592642CC11003F1EC9 /* SwinjectAutoregistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2B36B582642CC11003F1EC9 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			productName = SwinjectAutoregistration;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

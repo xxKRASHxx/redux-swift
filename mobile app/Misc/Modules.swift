@@ -1,0 +1,2 @@
+enum Root {}
+enum Details {}

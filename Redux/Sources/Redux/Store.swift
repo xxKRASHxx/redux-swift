@@ -1,8 +1,8 @@
 import Foundation
 
-public class Store<State, Action> {
+open class Store<State, Action> {
     
-    private(set) var state: State
+    private(set) public var state: State
     
     private let reducer: Reducer<State, Action>
     private let chain: Middleware<State, Action>
@@ -37,7 +37,7 @@ public class Store<State, Action> {
 }
 
 extension Store {
-    func addObserver(
+    public func addObserver(
         on queue: DispatchQueue = .main,
         mode: Observer.Mode = .throttle,
         callback: @escaping (State) -> ()
