@@ -1,5 +1,5 @@
 import Foundation
 
 struct AppState {
-    let counter: Int
+    var counter: Int
 }

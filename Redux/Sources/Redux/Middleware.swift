@@ -56,7 +56,7 @@ public struct TypedMiddleware<State, Action>: MiddlewareProtocol {
                 return middleware(
                     getState,
                     mAction,
-                    { acction in next(action) }
+                    next
                 )
             default:
                 return next(action)

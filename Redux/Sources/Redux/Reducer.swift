@@ -33,3 +33,16 @@ public struct TypedReducer<State, Action>: ReducerProtocol {
         }
     }
 }
+
+public struct PartialReducer<State, Action>: ReducerProtocol {
+    
+    public let reduce: Reducer<State, Action>
+    
+    public init<T>(of key: WritableKeyPath<State, T>, _ reduce: @escaping Reducer<T, Action>) {
+        self.reduce = { state, action in
+            var state = state
+            state[keyPath: key] = reduce(state[keyPath: key], action)
+            return state
+        }
+    }
+}
