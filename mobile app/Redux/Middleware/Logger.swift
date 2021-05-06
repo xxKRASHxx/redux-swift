@@ -6,13 +6,13 @@ struct Logger: MiddlewareProtocol {
     
     let identifier: String
     
-    init(identifier: String = "") {
+    init(identifier: String = "Logger") {
         self.identifier = identifier
     }
     
     var middleware: Middleware<AppState, AppAction> {
         { store, action, next in
-            print(identifier + ": \(action)")
+            print("\(identifier): \(action)")
             next(action)
         }
     }
@@ -40,14 +40,14 @@ let customLogger = Logger()
 let double = Double()
 
 let typedIncrement = TypedMiddleware<AppState, AppAction>(to: IncrementAction.self) { getState, action, next in
-    print("Increment!")
+    print("Typed: \(type(of: action))")
     next(action)
 }
 
 let typedDecrementMiddleware: Middleware<AppState, AppAction> = TypedMiddleware(
     to: DecrementAction.self
 ) { getState, action, next in
-    print("Decrement!")
+    print("Typed: \(type(of: action))")
     next(action)
 }.middleware
 
