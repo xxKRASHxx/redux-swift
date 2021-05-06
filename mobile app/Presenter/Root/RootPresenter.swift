@@ -2,6 +2,7 @@ import UIKit
 import UIKitPresenter
 import Redux
 import Presenter
+import AppStore
 
 extension Root {
     

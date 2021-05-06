@@ -1,7 +1,7 @@
 import Redux
 
-final class AppStore: Store<AppState, AppAction> {
-    static func `default`() -> AppStore {
+public final class Main: Store<AppState, AppAction> {
+    public static func `default`() -> Main {
         .init(
             state: AppState(counter: 0),
             reducer: appReducer,

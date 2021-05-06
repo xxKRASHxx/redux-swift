@@ -2,10 +2,11 @@ import UIKit
 import UIKitPresenter
 import Presenter
 import Redux
+import AppStore
 
 class AppPresenter<ViewController: UIViewController & Renderer>:
     ViewControllerPresenter<ViewController> {
-    @Inject var store: AppStore
+    @Inject var store: AppStore.Main
     
     override func present(_ renderer: ViewController) {
         super.present(renderer)

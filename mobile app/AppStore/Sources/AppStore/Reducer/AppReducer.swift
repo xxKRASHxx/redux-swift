@@ -1,6 +1,6 @@
 import Redux
 
-typealias AppReducer = Reducer<AppState, AppAction>
+public typealias AppReducer = Reducer<AppState, AppAction>
 
 private let counter = PartialReducer<AppState, AppAction>(of: \.counter, counterReducer)
 
