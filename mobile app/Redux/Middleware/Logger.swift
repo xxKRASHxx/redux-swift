@@ -39,23 +39,25 @@ let customLogger = Logger()
 
 let double = Double()
 
-let typedIncrementMiddleware = TypedMiddleware<AppState, AppAction>(to: IncrementAction.self) { getState, action, next in
+let typedIncrement = TypedMiddleware<AppState, AppAction>(to: IncrementAction.self) { getState, action, next in
     print("Increment!")
     next(action)
 }
 
-let typedDecrementMiddleware = TypedMiddleware<AppState, AppAction>(to: DecrementAction.self) { getState, action, next in
+let typedDecrementMiddleware: Middleware<AppState, AppAction> = TypedMiddleware(
+    to: DecrementAction.self
+) { getState, action, next in
     print("Decrement!")
     next(action)
-}
+}.middleware
 
 // MARK: - Composite result
 
 let logger = CompositeMiddleware<AppState, AppAction>(
     Double().middleware,
     double.middleware,
-    typedIncrementMiddleware.middleware,
-    typedDecrementMiddleware.middleware,
+    typedIncrement.middleware,
+    typedDecrementMiddleware,
     customLogger.middleware,
     genericLogger.middleware
 )
