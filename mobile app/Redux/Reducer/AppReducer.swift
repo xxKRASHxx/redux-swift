@@ -1,8 +1,9 @@
 import Redux
 
-let appReducer: Reducer<AppState, AppActions> = { (state, action) in
+let appReducer: Reducer<AppState, AppAction> = { (state, action) in
     switch action {
-    case .increment: return .init(counter: state.counter.advanced(by: 1));
-    case .decrement: return .init(counter: state.counter.advanced(by: -1));
+    case is IncrementAction: return .init(counter: state.counter.advanced(by: 1));
+    case is DecrementAction: return .init(counter: state.counter.advanced(by: -1));
+    default: return state
     }
 }

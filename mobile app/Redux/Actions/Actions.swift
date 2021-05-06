@@ -1,4 +1,4 @@
-enum AppActions {
-    case increment
-    case decrement
-}
+protocol AppAction {}
+
+struct IncrementAction: AppAction { }
+struct DecrementAction: AppAction { }

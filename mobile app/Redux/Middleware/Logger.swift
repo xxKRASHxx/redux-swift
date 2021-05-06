@@ -1,6 +1,14 @@
 import Redux
 
-let logger: Middleware<AppState, AppActions> = { store, action, next in
-    print(action)
-    next(action)
+struct Logger: MiddlewareProtocol {
+    
+     var middleware: Middleware<AppState, AppAction> = { store, action, next in
+        print(action)
+        next(action)
+    }
 }
+
+let loggerMiddleware = CompositeMiddleware(
+    Logger(),
+    Logger()
+)

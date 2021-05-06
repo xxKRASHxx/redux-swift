@@ -10,12 +10,12 @@ open class Store<State, Action> {
     
     private let queue: DispatchQueue
     
-    public init(
+    public init<M: MiddlewareProtocol>(
         state: State,
         reducer: @escaping Reducer<State, Action>,
-        middlewares: [Middleware<State, Action>] = [],
+        middlewares: [M] = [],
         queue: DispatchQueue = .init(label: "com.redux.store")
-    ) {
+    ) where M.Action == Action, M.State == State {
         self.state = state
         self.reducer = reducer
         self.queue = queue
@@ -25,6 +25,7 @@ open class Store<State, Action> {
         }
         
         self.chain = middlewares
+            .map { $0.middleware }
             .reversed()
             .reduce(initial) { result, middleware in
                 { store, action, next in
@@ -67,7 +68,7 @@ extension Store: Dispatcher {
     public func dispatch(action: Action) {
         queue.async {
             
-            self.chain(self, action, { action in
+            self.chain( { self.state }, action, { action in
                 self.state = self.reducer(self.state, action)
             })
             

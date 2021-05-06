@@ -16,9 +16,6 @@ let package = Package(
             name: "UIKitPresenter",
             targets: ["UIKitPresenter"]),
     ],
-    dependencies: [
-//        .package(path: "../Redux")
-    ],
     targets: [
         .target(
             name: "Presenter",
