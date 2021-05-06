@@ -10,30 +10,16 @@ open class Store<State, Action> {
     
     private let queue: DispatchQueue
     
-    public init<M: MiddlewareProtocol>(
+    public init(
         state: State,
         reducer: @escaping Reducer<State, Action>,
-        middlewares: [M] = [],
+        middleware chain: CompositeMiddleware<State, Action>,
         queue: DispatchQueue = .init(label: "com.redux.store")
-    ) where M.Action == Action, M.State == State {
+    ) {
         self.state = state
         self.reducer = reducer
         self.queue = queue
-        
-        let initial: Middleware<State, Action> = { store, action, next in
-            next(action);
-        }
-        
-        self.chain = middlewares
-            .map { $0.middleware }
-            .reversed()
-            .reduce(initial) { result, middleware in
-                { store, action, next in
-                    middleware(store, action) { action in
-                        result(store, action, next)
-                    }
-                }
-            }
+        self.chain = chain.middleware
     }
 }
 
@@ -67,11 +53,9 @@ extension Store {
 extension Store: Dispatcher {
     public func dispatch(action: Action) {
         queue.async {
-            
-            self.chain( { self.state }, action, { action in
-                self.state = self.reducer(self.state, action)
+            self.chain( { self.state }, action, { next in
+                self.state = self.reducer(self.state, next)
             })
-            
             self.observers.forEach { $0.handleState(self.state) }
         }
     }

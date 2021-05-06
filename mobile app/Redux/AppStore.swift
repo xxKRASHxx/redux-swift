@@ -5,9 +5,9 @@ final class AppStore: Store<AppState, AppAction> {
         .init(
             state: AppState(counter: 0),
             reducer: appReducer,
-            middlewares: [
-                loggerMiddleware
-            ]
+            middleware: .init(
+                logger.middleware
+            )
         )
     }
 }
