@@ -27,7 +27,7 @@ extension Root {
         override func map(state: AppState) -> Props? {
             .init(
                 counter: state.counter,
-                increment: { [weak store] in store?.dispatch(action: .increment) },
+                increment: { [weak store] in store?.dispatch(action: IncrementAction()) },
                 details: { [weak navigator] in navigator?.navigate(to: .details) }
             )
         }
